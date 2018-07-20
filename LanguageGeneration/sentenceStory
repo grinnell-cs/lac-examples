@@ -1,6 +1,6 @@
 #lang racket
 
-(require lac-camp/text)
+(require lac-camp)
 
 ;Write your sentence procedure below
 
