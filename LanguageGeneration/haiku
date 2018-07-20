@@ -1,0 +1,111 @@
+#lang racket
+(require lac-camp/text)
+
+;Fill in the blanks
+(define (haiku)
+
+  (string-_____ (capitalize (____________)) ".  "
+
+                 (_________ (seven-syllables)) ".  "
+
+                 (________ (______-_______)) "."))
+
+
+(define (seven-syllables)
+
+  (one-of (string-append (two-syllable-word) " "
+
+                         (three-syllable-word) " "
+
+                         (two-syllable-word))
+
+          (string-append (one-syllable-word) " "
+
+                         (two-syllable-word) " "
+
+                         (one-syllable-word) " "
+
+                         (two-syllable-word) " "
+
+                         (one-syllable-word))
+          (string-append (three-syllable-word) " "
+
+                         (one-syllable-word) " "
+
+                         (three-syllable-word))))
+
+
+(define (five-syllables)
+
+  (one-of (string-append (two-syllable-word) " "
+
+                         (one-syllable-word) " "
+
+                         (two-syllable-word))
+
+          (string-append (three-syllable-word) " "
+
+                         (two-syllable-word))
+
+          (string-append (one-syllable-word) " "
+
+                         (three-syllable-word) " "
+
+                         (one-syllable-word))))
+
+
+(define (one-syllable-word)
+
+  (one-of "fast"
+
+          "blue"
+
+          "hot"
+
+          "sleep"
+
+          "code"
+
+          "mouse"
+
+          "web"
+
+          "camps"))
+
+
+(define (two-syllable-word)
+
+  (one-of "keyboard"
+
+          "camper"
+
+          "yellow"
+
+          "purple"
+
+          "chases"
+
+          "racket"
+
+          "forgets"
+
+          "computes"
+
+          "language"
+
+          "vistas"))
+
+
+(define (three-syllable-word)
+
+  (one-of "counselor"
+
+          "director"
+
+          "computer"
+
+          "analyze"
+
+          "forgetful"
+
+          "amazing"))

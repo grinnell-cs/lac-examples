@@ -1,0 +1,81 @@
+#lang racket
+
+(require lac-camp/text)
+
+;Write your sentence procedure below
+
+
+
+;Starter word banks
+
+;Pick a noun (only person/thing words)
+(define (noun)
+
+  (one-of (string-append "a " (thing))
+
+          (string-append "the " (thing))
+
+          (person)))
+
+;A word bank of things
+(define (thing)
+
+  (one-of "computer"
+
+          "mouse"
+
+          "counselor"
+
+          "camper"
+
+          "coder"))
+
+; A word bank of people
+(define (person)
+
+  (one-of "Halle"
+
+          "Bella"
+
+          "Syamala"
+
+          "Yesheng"
+
+          "James"
+
+          "Stella"
+
+          "Vanessa"
+
+          "Nolan"
+
+          "Sam"
+
+          "Sarah"))
+
+;A word bank of transitive verbs
+(define (transitive-verb)
+
+  (one-of "watched"
+
+          "observed"
+
+          "threw"
+
+          "ignored"
+
+          "taught"))
+
+      	
+;A word bank of intransitive verbs
+(define (intransitive-verb)
+
+  (one-of "cogitated"
+
+          "slept"
+
+          "lectured"
+
+          "watched"))
+
+
