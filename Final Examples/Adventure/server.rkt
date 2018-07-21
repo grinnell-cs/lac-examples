@@ -4,7 +4,7 @@
 (require math/base)
 (require html-parsing)
 
-(define file-path "Desktop/Starter Code Files/Final Examples/Adventure/")
+(define file-path "Desktop/lac-examples/Final Examples/Adventure/")
 
 (define (randomName)
   (one-of "Jon" "Dave" "Sam" "Mark" "Luke" "Mary" "Beth" "Ana" "Jen"))
@@ -129,8 +129,8 @@
   (set! money (number->string (- money (fifth item))))
   `(li ,(car item) " " ,(cadr item) " " ,(caddr item)
        (ul
-        (li "Damage Dealt: " (strong ,(cadddr item)) " per level")
-        (li "Price: " (strong "$" ,(fifth item)))
+        (li "Damage Dealt: " (strong ,(number->string (cadddr item))) " per level")
+        (li "Price: " (strong "$" ,(number->string (fifth item))))
         ,(IncludeExtra request "home" "Purchase! (and return home)"
                        (list (list "tools" items) (list "money" money))))))
 
@@ -149,9 +149,10 @@
        ,(shopItem (third items) request)
        ,(shopItem (fourth items) request)
        ,(shopItem (fifth items) request))
+       )
       ,(IncludeDefault request "shop" "Try Another Shop")
       ,(IncludeDefault request "home" "Return Home")
-      ))))
+      )))
 
 (define (Train request)
   (define level (string->number (get "level" request "1")))
@@ -185,7 +186,7 @@
       )
      (body
       (img (@ (style "width:10%;display:inline") (src ,(cadr monster))))
-      (p "You encountered " ,(car monster) ": Level ",level)
+      (p "You encountered " ,(car monster) ": Level ",(number->string level))
       ,(IncludeExtra request "battle" "Fight" (list (list "mname" (car monster)) (list "mimg" (cadr monster)) (list "mhp" hp) (list "mlvl" mlvl)))
       ,(IncludeDefault request "home" "Run Away")
       ))))
@@ -220,8 +221,8 @@
      (body
       (p "You defeated " (strong ,name) "! This has earned you:")
       (ul
-       (li "$" ,(* mlvl 10))
-       (li ,(+ 1 (/ mlvl 5)) " levels"))
+       (li "$" ,(number->string (* mlvl 10)))
+       (li ,(number->string (+ 1 (/ mlvl 5))) " levels"))
       ,(IncludeExtra request "home" "Home" (list (list "money" newmoney) (list "level" newlevel)))))))
 
 (define (Battle request)
@@ -244,8 +245,8 @@
              (body
               (img (@ (style "width:10%;display:inline") (src ,img)))
               (strong ,name ": Level ",lvl)
-              (p ,name "'s Health: " ,hp)
-              (p "Your Health: ", health)
+              (p ,name "'s Health: " ,mhp)
+              (p "Your Health: " ,newhealth)
               ,(IncludeExtra request "battle" "Fight" (list (list "mname" name) (list "mimg" img) (list "mhp" mhp) (list "mlvl" lvl) (list "health" newhealth)))
               ,(IncludeExtra request "home" "Run Away" (list (list "health" newhealth)))
               ))))))
