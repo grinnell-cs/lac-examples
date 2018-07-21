@@ -1,0 +1,14 @@
+snowman.png
+    * https://pixabay.com/en/snowman-christmas-winter-xmas-2932713/
+wizard.jpg
+    * https://www.publicdomainpictures.net/en/view-image.php?image=177669&picture=wizard-with-wand
+ant.jpg
+    * http://www.soil-net.com/album/soil-net/cast/slides/ant_01.html
+spy.png
+    * http://res.publicdomainfiles.com/pdf_view/59/13534039812291.png
+brick.jpg
+    * https://upload.wikimedia.org/wikipedia/commons/0/05/Brick_Bennett.jpg
+stone.png
+    * https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/H%C3%BAsafell_Stone.png/541px-H%C3%BAsafell_Stone.png
+grass.jpg
+    * https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Fresh_grass%2C_2014.jpg/800px-Fresh_grass%2C_2014.jpg 
