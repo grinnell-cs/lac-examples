@@ -170,7 +170,7 @@
       )
      (body
       (h1 ,(randomName)"'s Dojo")
-      (p "For $" ,price " you can increase your level to " ,increase)
+      (p "For $" ,(number->string price) " you can increase your level to " ,increase)
       ,(IncludeExtra request "train" "Train" (list (list "level" resultLevel) (list "money" resultMoney)))
       ,(IncludeDefault request "home" "Return Home")
       ))))
