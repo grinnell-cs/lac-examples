@@ -79,9 +79,9 @@
     (head (title "Your daily haiku"))
     (body
      (h1 "Your daily haiku, presented by NAME and NAME")
-     (p ,(capitalize (seven-syllables)))
      (p ,(capitalize (five-syllables)))
-     (p ,(capitalize (seven-syllables))))))
+     (p ,(capitalize (seven-syllables)))
+     (p ,(capitalize (five-syllables))))))
 
 (serve-procedure "" haiku-page)
 (start-server)
