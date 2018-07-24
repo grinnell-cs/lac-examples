@@ -1,6 +1,10 @@
 #lang racket
 
 (require lac-camp)
+(define (sentence)
+  (one-of (sv-sentence)
+          (svo-sentence)))
+
 
 ;Write your sentence procedure below
 
