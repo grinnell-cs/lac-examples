@@ -4,7 +4,7 @@
 (require math/base)
 (require html-parsing)
 
-(define file-path "Desktop/lac-examples/Final Examples/Adventure/")
+(define file-path "Desktop/lac/Final Examples/Adventure/")
 
 (define (randomName)
   (one-of "Jon" "Dave" "Sam" "Mark" "Luke" "Mary" "Beth" "Ana" "Jen"))
