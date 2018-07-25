@@ -70,7 +70,7 @@
 (define (story num noun)
   `(html
      (head
-      (title "A story about " (indef-article noun)))
+      (title "A story about " ,(indef-article noun)))
      (body
       (h1 ,(indef-article noun) "'s day")
       (p "Once upon a time there was " ,(indef-article noun) ".")
